@@ -3,6 +3,7 @@
 Site web codé en HTML, CSS et PHP BDD), lors de la semaine intensive du 12 au 15 décembre 2016 à HETIC.
 
 Les participants et leurs rôles :
+* __Base de Données__ = 
 * __Intégration__ = 
 * __Design__ = 
 * __Contenu__ = 
