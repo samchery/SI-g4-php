@@ -1,0 +1,180 @@
+/* ------------------
+-- SI - PHP - groupe 4
+--------------------- */
+
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after{
+    content:' ';
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+/* HEADER */
+
+header {
+    height: 120px;
+    background: red;
+}
+
+h1 {
+    float: left;
+    margin-top: 32px;
+    font-family: ' crete round', serif;
+    font-size: 45px;
+    color: #444;
+}
+
+nav {
+    float: right;
+    margin-top: 50px;
+}
+
+header nav ul li {
+    display: inline-block;
+    float: left;
+}
+
+header nav ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.main-image {
+    background: url(../img-content/header.jpg) center center;
+    background-size: cover;
+    height: 560px;
+}
+
+.main-image h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 150px 0 40px 0;
+    margin-bottom: 20px;
+}
+
+/* navigation pays */
+
+.navigation{
+    width:800px;
+    margin: 15px auto;
+    display:block;
+}
+
+.navigation a{
+    display: block;
+    float:left;
+    margin:5px;
+    text-align:center;
+}
+
+.navigation a img{
+    width: 150px;
+}
+
+img.survol{
+    display:none;
+}
+
+a:hover img.survol{
+    display:block;
+}
+
+a:hover img.base{
+    display:none;
+}
+
+
+/* PRODUIT */
+
+.produit{ 
+    width:940px;
+    background-color:green;
+    margin: 60px auto;
+}
+
+.produit article{
+    width: 460px;
+    height: 270px;
+    float: left;
+    border-radius: 10px;
+    position:relative;
+    margin:5px;
+}
+
+.produit article img{
+    position:absolute;
+    width: 460px;
+    height: 270px;
+    top:0;
+    left:0;
+    display:block;
+    border-radius: 10px;
+}
+
+.overlay {
+    background: rgba(255,255,255,0.7);
+    height: 270px;
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+article h4{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.produit p{
+    text-align: center;
+    margin-bottom: 20px;  
+}
+
+.button2{
+    color: #fff;
+    background-color: #ba0003;
+    padding: 6px 20px;
+    border-radius: 3px;
+}
+
+.button2:hover{
+    color: #fff;
+    background-color: #02b8dd;
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 260px;
+    background-color: #444;
+}
+
+footer h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 80px
+}
+
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    color: #777;
+}
