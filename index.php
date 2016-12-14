@@ -1,57 +1,80 @@
 <?php
 // Connection base de données
 require_once "connect.php";
-// PHP 5.*
+
 if(isset($_GET['s'])){
-    $visible = $_GET['s'];
+    $filtre = $_GET['s'];
 } else {
-    $visible = 1;
+    $filtre = 1;
 }
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link href="styles/style.css" rel="stylesheet">
-        <title>Nom Site Web</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img-layout/logo.png">
+    <title>VivaGo</title>
+</head>
 
-    <body>
+<body>
  
-<?php include("header.php");?>
+    <?php include('header.php')?>
 
-<section class="main-image">
-   <h2>Organiser votre <br><strong>voyage sur mesure</strong></h2> </section>
-                
-<!-- PARTIE PRODUIT -->
-
+    <section class="main-image">
+       <h2>VivaGo vous transporte <br>vers de nouveaux horizons</h2> 
+   </section>
+   
+   <!-- PARTIE CONCEPT -->
+    <h1 id="titre2">Présentation</h1>
+    <section id="bloc1" class="clearfix">
+         <article>
+             <p class="testggg"><span id="lettre">P</span>our préparer un voyage, pour rêver et s’évader, pour le plaisir de la découverte, pour rire et s’émerveiller, <strong>VivaGo</strong> est là pour vous guider vers des choix de destinations originales et authentiques. Voici donc notre liste de destinations qui vous permettront de découvrir d’autres voyageurs passionnés et d’aller plus loin dans votre vision du monde. Vous avez également la possibilité de partager votre expérience de votre dernier voyage et d'en faire profiter nos lecteurs, amoureux d'aventures.</p>
+        </article>
+    </section>        
+              
+                  
+    <!-- PARTIE PRODUIT -->
 <?php 
     // recupère les données
-$sql = "SELECT `titre`, `resum`, `photo1` FROM `voyage` WHERE `visible` = :visible ;";
+$sql = "SELECT `ID`, `titre`, `visible`, `resum`, `photo1` FROM `voyage` WHERE `filtre` = :filtre AND `visible` = 1;";
     // Prepare les données
 $stmt = $pdo->prepare($sql);
     // associe à la valeur un numéro pour trie par section
-$stmt->bindValue(':visible', $visible);
+$stmt->bindValue(':filtre', $filtre, PDO::PARAM_INT);
     // execute la requête
 $stmt->execute();
 ?>
-        <div class="navigation clearfix"><a href="index.php?s=1"><img class="survol" src="img-content/logo/amerique1.png"> <img class="base" src="img-content/logo/amerique.png"></a><a href="index.php?s=2"><img class="survol" src="img-content/logo/europe1.png"><img class="base" src="img-content/logo/europe.png"></a><a href="index.php?s=3"><img class="survol" src="img-content/logo/asie1.png"><img class="base" src="img-content/logo/asie.png"></a><a href="index.php?s=4"><img class="survol" src="img-content/logo/afrique1.png"><img class="base" src="img-content/logo/afrique.png"></a><a href="index.php?s=5"><img class="survol" src="img-content/logo/oceanie1.png"><img class="base" src="img-content/logo/oceanie.png"></a>
+       <!-- PARTIE NAVIGATiON - images des continents -->
+        <div id="World" class="navigation clearfix"><a href="index.php?s=1#World"><img class="survol" src="img-content/logo/amerique1.png"> <img class="base" src="img-content/logo/amerique.png"></a><a href="index.php?s=2#World"><img class="survol" src="img-content/logo/europe1.png"><img class="base" src="img-content/logo/europe.png"></a><a href="index.php?s=3#World"><img class="survol" src="img-content/logo/asie1.png"><img class="base" src="img-content/logo/asie.png"></a><a href="index.php?s=4#World"><img class="survol" src="img-content/logo/afrique1.png"><img class="base" src="img-content/logo/afrique.png"></a><a href="index.php?s=5#World"><img class="survol" src="img-content/logo/oceanie1.png"><img class="base" src="img-content/logo/oceanie.png"></a>
             </div>
             
-<section class="produit clearfix">
-           
-<?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)):?> 
-
-    <article> <img src="img-content/<?=$row['photo1']?>">
-     <div class="overlay">
-    <h4><?=$row['titre']?></h4>
-    <p><small><?=$row['resum']?></small></p> <a class="button2" href="">plus d'info</a> </div>
-        </article>
+            
+        <section class="produit clearfix">
         
-        <?php endwhile;?>
+    <!-- Code PHP pour afficher les blocs voyages -->  
+<?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)):?> 
+            <article> 
+            <img src="img-content/<?=$row['photo1']?>">
+            <div class="overlay">
+                <h4><?=$row['titre']?></h4>
+                <p><small><?=$row['resum']?></small></p> <a class="button2" href="produit.php?ID=<?=$row['ID']?>">Plus d'infos</a>
+            </div>
+            </article>       
+<?php endwhile;?>
        </section>
-                     
-<?php include("footer.php");?>
-    </body>
+       
+        <!-- PARTIE USER AJOUTE DONNEE -->             
+        <section id="voyage" class="ajout clearfix">
+            <img src="img-content/content1.jpg">
+            <p>Vous avez voyagé dernièrement ? Partagez avec nous vos expériences et découvertes ! Surprenez-nous !</p>
+            <div id="wraper" class="clearfix"><a class="b1" href="formulaire.php">Votre coup de coeur</a>
+            <a class="b2" href="formulaire.php"></a></div>
+        </section>  
+                                          
+<?php include('footer.php')?>
+ </body>    
 </html>

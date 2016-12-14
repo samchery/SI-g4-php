@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lora', serif;
 }
 
 .clearfix:before, .clearfix:after{
@@ -20,23 +21,17 @@
 /* HEADER */
 
 header {
-    height: 120px;
-    background: red;
-}
-
-h1 {
-    float: left;
-    margin-top: 32px;
-    font-family: ' crete round', serif;
-    font-size: 45px;
-    color: #444;
+    height: 130px;
+    background: white;
 }
 
 nav {
     float: right;
     margin-top: 50px;
 }
-
+header img {
+    margin: 0 0 2% 2%;
+}
 header nav ul li {
     display: inline-block;
     float: left;
@@ -45,9 +40,17 @@ header nav ul li {
 header nav ul li {
     text-transform: uppercase;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 60px;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color:#186984;
+}
+
+a#moderer {
+    color:#ba0003;
+}
 .main-image {
     background: url(../img-content/header.jpg) center center;
     background-size: cover;
@@ -55,20 +58,53 @@ header nav ul li {
 }
 
 .main-image h2 {
+    font: 40px 'Aclonica', sans-serif;
+    color: #ba0003;
     font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    padding: 150px 0 40px 0;
+    padding: 90px 0;
     margin-bottom: 20px;
+}
+
+/* PARTIE CONCEPT */
+
+#bloc1 {
+    width: 50%;
+    margin: 30px auto 75px auto;
+
+}
+
+#titre2 {
+    font: 25px 'Aclonica', sans-serif;
+    text-transform:uppercase;
+    text-align: center;
+    margin-top: 50px;
+    color: #186984;
+}
+
+.testggg {
+    float: left;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+#lettre {
+    width:50px;
+    float: left;
+    font: bold 50px 'Aclonica', serif;
+    color: #ba0003;
+    margin: 0 0.5%;
 }
 
 /* navigation pays */
 
 .navigation{
-    width:800px;
+    width:850px;
     margin: 15px auto;
     display:block;
 }
+
 
 .navigation a{
     display: block;
@@ -97,8 +133,7 @@ a:hover img.base{
 /* PRODUIT */
 
 .produit{ 
-    width:940px;
-    background-color:green;
+    width:955px;
     margin: 60px auto;
 }
 
@@ -158,23 +193,437 @@ article h4{
     background-color: #02b8dd;
 }
 
+/* PARTIE POUR REJOINDRE FORMULAIRE  */
+
+.ajout{
+    position: relative;
+    margin-top:140px;
+}
+.ajout img{
+    width:100%;
+}
+
+.ajout p{
+    position: absolute;
+    text-align: center;
+    width: 450px;
+    left: 20%;
+    line-height: 25px;
+    top: 30%;
+}
+
+
+#wraper {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    border: 5px solid #ba0003;
+    width: 450px;
+    margin: 0 auto;
+    transition:0.5s;
+}
+
+#wraper:hover{
+    background: #fff;
+}
+.b1{
+    float: left;
+    width: 300px;
+    height: 100px;
+    display: block;
+    color: #ba0003;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-style: oblique;
+    padding-top:30px;
+    margin-top: 2%;
+    font-weight:bolder;
+}
+.b2 {
+    display: block;
+    float: left;
+    background: url(../img-content/ajout.png) center center no-repeat;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin-top: 2%;
+}
 
 /* FOOTER */
 
+footer{
+    margin-top:75px;
+    
+}
+ul.foot{
+    list-style: none;
+    width:80%;
+    margin: 15px auto 0 auto;
+    text-align:center;
+}
+ul.foot li{
+    display: inline-block;
+    margin: 0 90px;
+}
+
+ul.foot li img{
+    width:65px;
+    opacity: 0.5;
+}
+
+footer article {
+    margin-top:30px;
+}
+footer p, footer h4 {
+    text-align: center;
+}
+
+footer h4 {
+    font-family: 'Aclonica', sans-serif;
+    text-decoration: underline;
+    
+}
 footer {
+    width: 100%;
     height: 260px;
-    background-color: #444;
+    background-color: white;
+}
+footer p {
+    padding-bottom: 2%;
 }
 
-footer h1 {
-    color: #fff;
-    text-align: center;
-    padding-top: 80px
+
+
+/* ------------------
+-- Style du BACK OFFICE
+--------------------- */
+
+.entete{
+    padding-bottom:15px;
+    background-color: aliceblue;
+    width:100%;
+    margin-bottom:50px;
+    padding:15px;
+}
+.entete h1{
+    margin-top:0;
+    width:100%;
+    float:none;
+    color: #186984;
+    margin-top:10px;
 }
 
-.copyright {
-    text-align: center;
-    font-weight: bold;
-    padding-top: 30px;
-    color: #777;
+.entete p{
+    margin-left:50px;
 }
+
+.entete a{
+    text-decoration:none;
+    background: #ba0003;
+    display:block;
+    color:white;
+    padding:8px;
+    width:150px;
+    margin:15px 50px;
+}
+
+.logo{
+    float:right;
+    margin-right:50px;
+    width:100px;
+    display:block;
+}
+
+.relief{
+    color: #ba0003;
+}
+
+table{
+    width:90%;
+    margin:10px auto;
+}
+
+
+td, th{
+    padding:5px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background: #eee;
+}
+
+tr:nth-child(odd){
+    background: #ddd;
+}
+
+td.resum{
+   text-align:left; 
+}
+
+td.moderation{
+    width:300px;
+}
+td.moderation form{
+    float:left;
+    width:50%;
+}
+
+input.supp{
+    background: white;
+    border: 1px solid #ba0003;
+    padding:5px;
+    cursor: pointer;
+    text-transform:uppercase;
+}
+
+.moderation div{
+    opacity:0;
+}
+
+.moderation:hover div{
+    opacity:1;
+}
+
+input.edit{
+    color: white;
+    background: #ba0003;
+    padding:5px;
+    text-transform:uppercase;
+    cursor: pointer;
+}
+
+td img{
+    width:100px;
+}
+
+
+form{
+    width:90%;
+    margin:30px auto;
+}
+
+.BkO{
+    margin-left:75px;
+    width:500px;
+    color: #ba0003;
+}
+
+.addvalue{
+    background:beige;
+    width: 90%;
+    margin:20px auto;
+    padding:15px;
+}
+
+.question{
+    font-weight:bold;
+    display:block;
+    margin-top:10px;
+}
+
+
+input.button{
+    color: white;
+    background: #ba0003;
+    padding:5px;
+    text-transform:uppercase;
+    cursor: pointer;
+    margin-left:150px;
+    margin-top:20px;
+}
+
+p.comment{
+    font-style:italic;
+    font-size:11px;
+}
+
+.liste input{
+    margin: 0 10px;
+}
+
+/* style du filtre */
+.visible {
+    float: left;
+    width: 45%;
+}
+
+.grosPatapouf {
+    position: relative;
+}
+
+.continent {
+    float: left;
+    width: 45%;
+    margin-left: 10%;
+}
+
+/* ------------------
+-- Style de la PAGE PRODUIT 
+--------------------- */
+#produit {
+    width: 100%;
+    background-color:#186984; 
+    padding:15px;
+}
+
+#produit figure  {
+    display:block;
+    float:left;
+    width:50%;
+    text-align:center;
+}
+
+#produit figure img{
+    width: 460px;
+}
+
+#produit p {
+    color: white;
+    width:50%;
+    float:right;
+    font-size:13px;
+    line-height:22px;
+}
+
+#produit h1 {
+    width: 100%;
+    font: 30px "Aclonica";
+    color: white;
+    text-decoration: underline;
+    text-align: center; 
+    
+}
+#produit h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* ------------------
+-- Style du FORMULAIRE AJOUT USER 
+--------------------- */ 
+
+.ajouterFrom h2, .Thanks h2{
+    text-align:center;
+	color: red;
+	text-decoration: underline;
+	font-size: 30px;
+}
+
+.Thanks p{
+    text-align:center;
+    margin-top:20px;
+}
+
+#image{
+	width: 60%;
+    margin: 0 auto;
+}
+
+#image img{
+    width:150px;
+	padding: 5%;
+	margin: 0 0 0 9%;
+}
+
+hr{
+	width: 50% 1px black;
+	margin-top: -2%;
+}
+
+.centrage{
+	width:80%;
+    background:beige;
+    margin:0 auto;
+    padding:5px;
+
+}
+
+.ajouterFrom label{
+	font-weight: bold;
+    margin-bottom:10px;
+}
+
+.ajouterFrom input{
+	margin-left: 20px;
+	width: 15%;
+	border-radius: 5px;
+	margin-top: 2%;
+	border: 2px black solid;
+	height: 30px;
+	padding-left: 1%;
+}
+
+.ajouterFrom textarea{
+	margin-left: 20px;
+	width: 15%;
+	height: 60px;
+	border-radius: 10px;
+	margin-top: 3%;
+	border: 2px solid black;
+	padding-left: 1%;
+}
+
+.ajouterFrom select{
+	margin-left: 20px;
+	width: 10%;
+	border-radius: 10px;
+	margin-top: 3%;
+	border: 2px solid black;
+}
+
+.decalage{
+	margin-left: 3%;
+}
+
+
+#date{
+	margin-left: 6%;
+}
+
+#avis{
+	margin-left: 6%;
+}
+
+
+#logo{
+	margin-left: 7%;
+	margin-top: -1%;
+}
+
+#fond{
+	position: absolute;
+	margin-left: 20%;
+	margin-top: -25%;
+}
+
+
+#button{
+	width: 150px;
+	margin-left: 14.5%;
+	background-color: white;
+	color: red;
+	font-weight: bold;
+}
+
+#destination{
+	margin-left: 2.3%;
+}
+
+
+#separation{
+	width: 80%;
+	margin: 7% 10% 0 13%;
+}
+
+
+
+.ajouterFrom form{
+	margin-top: 20px;
+}
+
+
