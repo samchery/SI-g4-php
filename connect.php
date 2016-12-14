@@ -4,4 +4,6 @@ try{
 } catch(PDOException $exception) {
     die($exception->getMessage());
 }
+
+// récupère un bon encodage 
 $pdo->exec("SET NAMES UTF8");

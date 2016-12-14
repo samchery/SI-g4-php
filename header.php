@@ -1,11 +1,11 @@
 <header class="clearfix">
-    <h1>logo</h1>
+  <img src="img-layout/logo.png" alt="logo" width="100">
     <nav>
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#TopNews">Destination phare</a></li>
-            <li><a href="#World">Le monde</a></li>
-            <li><a href="#">Contact</a></li>
+           <li><a href="index.php">Accueil</a></li>
+            <li><a href="index.php#World">Le monde</a></li>
+            <li><a href="index.php#voyage">Ajouter une destination</a></li>
+            <li><a href="moderation.php"  id="moderer">Modérer</a></li>
         </ul>
     </nav>
 </header>
