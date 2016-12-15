@@ -10,8 +10,8 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(":ID", $_GET['ID']);
 $stmt->execute();
 if (false == $row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-	header("Location: backoffice.php");
-} 
+    header("Location: backoffice.php");
+}
 ?>
 
 <!doctype html>
@@ -25,41 +25,41 @@ if (false == $row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <title>Modifier <?=$row['titre']?></title>
 </head>
 <body>
-    <h1 id="titlemodif">Éditer un article</h1>
-    <form action="requete/update.php" method="post" class="editer">
+<h1 id="titlemodif">Éditer un article</h1>
+<form action="requete/update.php" method="post" class="editer">
 
-        <input type="hidden" name="ID" value="<?=$row['ID']?>">
+    <input type="hidden" name="ID" value="<?=$row['ID']?>">
 
-        <p>
-            <label for="titre">Titre :</label>
-            <input type="text" name="titre" id="titre" value="<?=$row['titre']?>">
-        </p>
-        <p>
-            <label for="adresse">Localisation :</label> 
-            <input type="text" name="adresse" id="adresse" class="decalage" value="<?=$row['adresse']?>" />
-        </p>
+    <p>
+        <label for="titre">Titre :</label>
+        <input type="text" name="titre" id="titre" value="<?=$row['titre']?>">
+    </p>
+    <p>
+        <label for="adresse">Localisation :</label>
+        <input type="text" name="adresse" id="adresse" class="decalage" value="<?=$row['adresse']?>" />
+    </p>
 
-        <p><label for="resum">Résumé accrocheur :</label>
-            <textarea cols="125" rows="3" type="text" name="resum" id="resum" value="<?=$row['resum']?>"></textarea>
-        </p>
+    <p><label for="resum">Résumé accrocheur :</label>
+        <textarea cols="125" rows="3" type="text" name="resum" id="resum" value="<?=$row['resum']?>"><?=$row['resum']?></textarea>
+    </p>
 
-        <p>
-            <label for="description">Description :</label>
-            <textarea cols="125" rows="3" type="text" name="description" id="description" value="<?=$row['description']?>"></textarea>
-        </p>
+    <p>
+        <label for="description">Description :</label>
+        <textarea cols="125" rows="3" type="text" name="description" id="description" value="<?=$row['description']?>"><?=$row['description']?></textarea>
+    </p>
 
-        <p>
-            <label for="photo">Photo :</label>
-            <input type="text" name="photo1" id="photo" value="<?=$row['photo1']?>">
-        </p>
+    <p>
+        <label for="photo">Photo :</label>
+        <input type="text" name="photo1" id="photo" value="<?=$row['photo1']?>">
+    </p>
 
-        <p>
-            <label for="section">Continent :</label>
-            <input type="text" name="section" id="section" value="<?=$row['section']?>">
-        </p>
+    <p>
+        <label for="section">Continent :</label>
+        <input type="text" name="section" id="section" value="<?=$row['section']?>">
+    </p>
 
-        <input type="submit" value="Modifier" id="modif">
-    </form>
+    <input type="submit" value="Modifier" id="modif">
+</form>
 
 </body>
 </html>

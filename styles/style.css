@@ -132,7 +132,7 @@ a:hover img.base{
 
 /* PRODUIT */
 
-.produit{ 
+.produit{
     width:955px;
     margin: 60px auto;
 }
@@ -179,7 +179,7 @@ article h4{
 
 .produit p{
     text-align: center;
-    margin-bottom: 20px;  
+    margin-bottom: 20px;
 }
 
 .button2{
@@ -257,7 +257,7 @@ article h4{
 
 footer{
     margin-top:75px;
-    
+
 }
 ul.foot{
     list-style: none;
@@ -285,7 +285,7 @@ footer p, footer h4 {
 footer h4 {
     font-family: 'Aclonica', sans-serif;
     text-decoration: underline;
-    
+
 }
 footer {
     width: 100%;
@@ -303,7 +303,7 @@ footer p {
 --------------------- */
 
 .entete{
-    padding-bottom:15px;
+    padding-bottom: 15px;
     background-color: aliceblue;
     width:100%;
     margin-bottom:50px;
@@ -362,7 +362,7 @@ tr:nth-child(odd){
 }
 
 td.resum{
-   text-align:left; 
+    text-align:left;
 }
 
 td.moderation{
@@ -374,7 +374,7 @@ td.moderation form{
 }
 
 a.supp{
-    display:ineline-block;
+    display:inline-block;
     color:black;
     background: white;
     border: 1px solid #ba0003;
@@ -386,7 +386,7 @@ a.supp{
 
 
 a.edit{
-    display:ineline-block;
+    display:inline-block;
     color: white;
     background: #ba0003;
     padding:5px;
@@ -402,7 +402,7 @@ a.edit{
 }
 
 .supp:hover + .information{
-   opacity:1;
+    opacity:1;
 }
 
 td img{
@@ -501,7 +501,7 @@ p.comment{
 --------------------- */
 #produit {
     width: 100%;
-    background-color:#186984; 
+    background-color:#186984;
     padding:15px;
 }
 
@@ -529,8 +529,8 @@ p.comment{
     font: 30px "Aclonica";
     color: white;
     text-decoration: underline;
-    text-align: center; 
-    
+    text-align: center;
+
 }
 #produit h2 {
     font-size: 20px;
@@ -541,7 +541,7 @@ p.comment{
 
 /* ------------------
 -- Style du FORMULAIRE AJOUT USER 
---------------------- */ 
+--------------------- */
 #screen {
     margin-left: 26%;
     width: 50%;
@@ -552,10 +552,10 @@ figcaption {
 }
 .ajouterFrom h2, .Thanks h2{
     text-align:center;
-	color: #ba0003;
+    color: #ba0003;
     font-family: 'Aclonica';
-	text-decoration: underline;
-	font-size: 30px;
+    text-decoration: underline;
+    font-size: 30px;
     margin-top: 20px;
 }
 
@@ -565,23 +565,24 @@ figcaption {
 }
 
 #image{
-	width: 60%;
+    width: 60%;
     margin: 0 auto;
 }
 
 #image img{
     width:150px;
-	padding: 5%;
-	margin: 0 0 0 12%;
+    padding: 5%;
+    margin: 0 0 0 12%;
 }
 
 hr{
-	width: 50% 1px black;
-	margin-top: -2%;
+    width: 50%;
+    height: 2px;
+    margin-top: -2%;
 }
 
 .centrage{
-	width:80%;
+    width:80%;
     height: 1000px;
     background:#186984;
     margin:0 auto;
@@ -590,97 +591,97 @@ hr{
 }
 
 .ajouterFrom label{
-	font-weight: bold;
+    font-weight: bold;
     margin-bottom:10px;
     margin-top: 1%;
     color: white;
 }
 
 .ajouterFrom input{
-	margin-left: 20px;
-	width: 30%;
-	border-radius: 5px;
-	margin-top: 2%;
-	border: 2px black solid;
-	height: 30px;
+    margin-left: 20px;
+    width: 30%;
+    border-radius: 5px;
+    margin-top: 2%;
+    border: 2px black solid;
+    height: 30px;
     font-size: 15px;
     padding-left: 10px;
 }
 
 .ajouterFrom textarea{
     display: block;
-	margin-left: 20px;
-	width: 30%;
-	height: 100px;
-	border-radius: 10px;
-	margin-top: 1%;
-	border: 2px solid black;
-	padding-left: 10px;
+    margin-left: 20px;
+    width: 30%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 1%;
+    border: 2px solid black;
+    padding-left: 10px;
 }
 
 .ajouterFrom select{
-	margin-left: 20px;
-	width: 10%;
-	border-radius: 10px;
-	margin-top: 3%;
-	border: 2px solid black;
+    margin-left: 20px;
+    width: 10%;
+    border-radius: 10px;
+    margin-top: 3%;
+    border: 2px solid black;
 }
 
 .decalage{
-	margin-left: 3%;
+    margin-left: 3%;
     margin-bottom: 3%;
 }
 
 
 #date{
-	margin-left: 6%;
+    margin-left: 6%;
 }
 
 #avis{
-	margin-left: 6%;
+    margin-left: 6%;
 }
 
 
 #logo{
-	margin-left: 7%;
-	margin-top: -1%;
+    margin-left: 7%;
+    margin-top: -1%;
 }
 
 #fond{
-	position: absolute;
-	margin-left: 20%;
-	margin-top: -25%;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: -25%;
 }
 
 
 #button{
-	width: 150px;
-	float: right;
-	background-color: white;
-	color: #ba0003;
-	font-weight: bold;
+    width: 150px;
+    float: right;
+    background-color: white;
+    color: #ba0003;
+    font-weight: bold;
 }
 
 #destination{
-	margin-left: 2.3%;
+    margin-left: 2.3%;
 }
 
 
 #separation{
-	width: 80%;
-	margin: 7% 10% 0 13%;
+    width: 80%;
+    margin: 7% 10% 0 13%;
 }
 
 
 
 .ajouterFrom form{
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 
 /* ------------------
 -- Style du FORMULAIRE EDITER
---------------------- */ 
+--------------------- */
 .editer{
     width:80%;
     height: 700px;
@@ -695,7 +696,7 @@ hr{
     font-family: 'Aclonica';
     text-decoration: underline;
     font-size: 30px;
-    margin:3% 0;    
+    margin:3% 0;
 }
 .editer label{
     font-weight: bold;
@@ -704,7 +705,7 @@ hr{
     color: white;
 }
 .editer input{
-    margin-left: 20px;
+    margin-left:20px;
     width: 30%;
     border-radius: 5px;
     margin: 2% 0;
@@ -761,8 +762,8 @@ hr{
 
 .form-wrapper input {
     width: 80%;
-    height: 2em;
-    padding: 1em 0.5em;
+    height: 2.5em;
+    padding: 0.5em 0.5em;
     float: left;
     font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
     border: 0;
@@ -805,7 +806,7 @@ hr{
     border: 0;
     padding: 0;
     cursor: pointer;
-    height: 2em;
+    height: 2.5em;
     width: 20%;
     font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
     color: #fff;
