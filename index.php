@@ -39,7 +39,7 @@ if(isset($_GET['s'])){
 <!-- PARTIE PRODUIT -->
 <?php
 // recupère les données
-$sql = "SELECT `ID`, `titre`, `section`, `resum`, `photo1` FROM `voyage` WHERE `section` = :section ;";
+$sql = "SELECT `ID`, `titre`, `section`, `visible`,  `resum`, `photo1` FROM `voyage` WHERE `section` = :section AND `visible` = 1;";
 // Prepare les données
 $stmt = $pdo->prepare($sql);
 // associe à la valeur un numéro pour trie par section
@@ -60,7 +60,7 @@ $stmt->execute();
 
 <?php
 if(isset($_POST['search'])){
-    $stnt = $pdo->prepare("SELECT `ID`, `titre`, `section`, `resum`, `photo1` FROM `voyage` WHERE titre LIKE :search");
+    $stnt = $pdo->prepare("SELECT `ID`, `titre`, `visible`, `section`, `resum`, `photo1` FROM `voyage` WHERE titre LIKE :search AND `visible` = 1;");
     $stnt->bindValue(':search','%'.$_POST['search'].'%');
     $stnt->execute();
     $rows = $stnt->rowCount();
@@ -73,7 +73,7 @@ if(isset($_POST['search'])){
                 <img src="img-content/<?=$row['photo1']?>">
                 <div class="overlay">
                     <h4><?=$row['titre']?></h4>
-                    <p><small><?=$row['resum']?></small></p> <a class="button2" href="produit.php?ID=<?=$row['ID']?>">plus d'info</a> </div>
+                    <p><small><?=$row['resum']?></small></p> <a class="button2" href="produit.php?ID=<?=$row['ID']?>">Plus d'infos</a> </div>
             </article>
         <?php endwhile;?>
     </section>
@@ -85,7 +85,7 @@ if(isset($_POST['search'])){
         <article> <img src="img-content/<?=$row['photo1']?>">
             <div class="overlay">
                 <h4><?=$row['titre']?></h4>
-                <p><small><?=$row['resum']?></small></p> <a class="button2" href="produit.php?ID=<?=$row['ID']?>">plus d'info</a> </div>
+                <p><small><?=$row['resum']?></small></p> <a class="button2" href="produit.php?ID=<?=$row['ID']?>">Plus d'infos</a> </div>
         </article>
     <?php endwhile;
     }?>
