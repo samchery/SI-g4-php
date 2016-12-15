@@ -42,14 +42,13 @@ if(isset($_GET['s'])){
 $sql = "SELECT `ID`, `titre`, `section`, `visible`,  `resum`, `photo1` FROM `voyage` WHERE `section` = :section AND `visible` = 1;";
 // Prepare les données
 $stmt = $pdo->prepare($sql);
-// associe à la valeur un numéro pour trie par section
 $stmt->bindValue(':section', $section);
 // execute la requête
 $stmt->execute();
 ?>
 <!-- la barre de recherche -->
 <div>
-    <h2 id="World" class="hrecherche">Choisissez une destination ou naviguer par continent</h2>
+    <h2 id="World" class="hrecherche">Choisissez une destination ou naviguez par continent</h2>
     <form class="form-wrapper clearfix" method="post" action="">
         <input class="barre" type="text" name="search" placeholder="Que souhaitez-vous rechercher ?">
         <button class="boutonBarre" type="submit" name="submit" value="Rechercher">GO</button>
