@@ -142,9 +142,10 @@ a:hover img.base{
     height: 270px;
     float: left;
     border-radius: 10px;
-    position:relative;
     margin:5px;
+    position:relative;
 }
+
 
 .produit article img{
     position:absolute;
@@ -192,6 +193,7 @@ article h4{
     color: #fff;
     background-color: #02b8dd;
 }
+
 
 /* PARTIE POUR REJOINDRE FORMULAIRE  */
 
@@ -371,28 +373,36 @@ td.moderation form{
     width:50%;
 }
 
-input.supp{
+a.supp{
+    display:ineline-block;
+    color:black;
     background: white;
     border: 1px solid #ba0003;
     padding:5px;
     cursor: pointer;
     text-transform:uppercase;
+    text-decoration:none;
 }
 
-.moderation div{
-    opacity:0;
-}
 
-.moderation:hover div{
-    opacity:1;
-}
-
-input.edit{
+a.edit{
+    display:ineline-block;
     color: white;
     background: #ba0003;
     padding:5px;
     text-transform:uppercase;
     cursor: pointer;
+    text-decoration:none;
+}
+
+.information{
+    height:35px;
+    margin-top:13px;
+    opacity:0;
+}
+
+.supp:hover + .information{
+   opacity:1;
 }
 
 td img{
@@ -425,14 +435,15 @@ form{
 }
 
 
-input.button{
-    color: white;
-    background: #ba0003;
+a.button{
+    color: #ba0003;
+    border:1px solid #ba0003;
     padding:5px;
     text-transform:uppercase;
     cursor: pointer;
-    margin-left:150px;
+    display: inline-block;
     margin-top:20px;
+    text-decoration:none;
 }
 
 p.comment{
@@ -444,7 +455,28 @@ p.comment{
     margin: 0 10px;
 }
 
+/* style notification */
+
+.notification{
+    width:85%;
+    margin: 20px auto 40px auto;
+}
+
+.notification a{
+    text-decoration: none;
+    color: black;
+    display:block;
+}
+
+.notification a span{
+    color: darkred;
+}
+
 /* style du filtre */
+
+.titreback{
+    margin-bottom:10px;
+}
 .visible {
     float: left;
     width: 45%;
@@ -458,6 +490,10 @@ p.comment{
     float: left;
     width: 45%;
     margin-left: 10%;
+}
+
+.btn{
+    margin-top:15px;
 }
 
 /* ------------------
@@ -506,12 +542,21 @@ p.comment{
 /* ------------------
 -- Style du FORMULAIRE AJOUT USER 
 --------------------- */ 
-
+#screen {
+    margin-left: 26%;
+    width: 50%;
+}
+figcaption {
+    margin-left: 26%;
+    font-size: 15px;
+}
 .ajouterFrom h2, .Thanks h2{
     text-align:center;
-	color: red;
+	color: #ba0003;
+    font-family: 'Aclonica';
 	text-decoration: underline;
 	font-size: 30px;
+    margin-top: 20px;
 }
 
 .Thanks p{
@@ -527,7 +572,7 @@ p.comment{
 #image img{
     width:150px;
 	padding: 5%;
-	margin: 0 0 0 9%;
+	margin: 0 0 0 12%;
 }
 
 hr{
@@ -537,35 +582,40 @@ hr{
 
 .centrage{
 	width:80%;
-    background:beige;
+    height: 1000px;
+    background:#186984;
     margin:0 auto;
-    padding:5px;
+    padding: 2% 5%;
 
 }
 
 .ajouterFrom label{
 	font-weight: bold;
     margin-bottom:10px;
+    margin-top: 1%;
+    color: white;
 }
 
 .ajouterFrom input{
 	margin-left: 20px;
-	width: 15%;
+	width: 30%;
 	border-radius: 5px;
 	margin-top: 2%;
 	border: 2px black solid;
 	height: 30px;
-	padding-left: 1%;
+    font-size: 15px;
+    padding-left: 10px;
 }
 
 .ajouterFrom textarea{
+    display: block;
 	margin-left: 20px;
-	width: 15%;
-	height: 60px;
+	width: 30%;
+	height: 100px;
 	border-radius: 10px;
-	margin-top: 3%;
+	margin-top: 1%;
 	border: 2px solid black;
-	padding-left: 1%;
+	padding-left: 10px;
 }
 
 .ajouterFrom select{
@@ -578,6 +628,7 @@ hr{
 
 .decalage{
 	margin-left: 3%;
+    margin-bottom: 3%;
 }
 
 
@@ -604,9 +655,9 @@ hr{
 
 #button{
 	width: 150px;
-	margin-left: 14.5%;
+	float: right;
 	background-color: white;
-	color: red;
+	color: #ba0003;
 	font-weight: bold;
 }
 
@@ -626,4 +677,175 @@ hr{
 	margin-top: 20px;
 }
 
+
+/* ------------------
+-- Style du FORMULAIRE EDITER
+--------------------- */ 
+.editer{
+    width:80%;
+    height: 700px;
+    background:#186984;
+    margin:0 auto;
+    padding: 2% 6%;
+
+}
+#titlemodif {
+    text-align:center;
+    color: #ba0003;
+    font-family: 'Aclonica';
+    text-decoration: underline;
+    font-size: 30px;
+    margin:3% 0;    
+}
+.editer label{
+    font-weight: bold;
+    margin-bottom:10px;
+    margin-top: 1%;
+    color: white;
+}
+.editer input{
+    margin-left: 20px;
+    width: 30%;
+    border-radius: 5px;
+    margin: 2% 0;
+    border: 2px black solid;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.editer textarea{
+    display: block;
+    margin-left: 20px;
+    width: 30%;
+    height: 100px;
+    border-radius: 10px;
+    margin: 2% 0;
+    border: 2px solid black;
+    padding-left: 10px;
+}
+
+#modif {
+    width: 150px;
+    font-size: 20px;
+    padding: 0;
+    float: right;
+    background-color: white;
+    color: #ba0003;
+    font-weight: bold;
+}
+
+/* PARTIE BARRE DE RECHERCHE */
+.hrecherche {
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 2em;
+    color: #c42f2f;
+    margin-top: 0.5em;
+}
+
+
+.form-wrapper {
+    width: 45%;
+    padding: 0.5em;
+    margin: 1.5em auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+.form-wrapper input {
+    width: 80%;
+    height: 2em;
+    padding: 1em 0.5em;
+    float: left;
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.form-wrapper input::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 2em;
+    width: 20%;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+
+.form-wrapper button:hover{
+    background: #e54040;
+}
+
+.form-wrapper button:active,
+.form-wrapper button:focus{
+    background: #c42f2f;
+}
+
+.form-wrapper button:before {
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #d83c3c transparent;
+    top: 12px;
+    left: -6px;
+}
+
+.form-wrapper button:hover:before{
+    border-right-color: #e54040;
+}
+
+.form-wrapper button:focus:before{
+    border-right-color: #c42f2f;
+}
+
+.form-wrapper button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
 

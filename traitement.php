@@ -11,7 +11,7 @@ require_once "connect.php";
 	<title>Ajouter un voyage Validation</title>
 </head>
 <body>
-<?php include('header.php')?>
+<?php include('header.php');?>
    
     <section class="Thanks">
 		<h2>Merci ! </h2>
@@ -34,6 +34,6 @@ $stmt->bindValue(":section", $_POST ['section']);
 $stmt->execute();
 ?>
 
-<?php include('footer.php')?>
+<?php include('footer.php');?>
 </body>
 </html>

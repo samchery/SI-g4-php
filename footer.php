@@ -9,7 +9,7 @@
         <section>
             <article>
                 <h4>Mentions légales :</h4>
-                <p>© Vivago - Semaine intensive HETIC 2016. All Rights Reserved. <br> Le présent site Web et l’ensemble de son contenu, y compris textes, images fixes ou animées, sont protégés par les droits d’auteurs.<br> Une production de : <br>Samantha CHERY (chef de projet), Mélanie HERAULT (designer), El Mahfoud MAHFOUFI (intégrateur), Aurélien ROUCHY (intégrateur), Édouard GACHET (intégrateur)</p>
+                <p>© Vivago - Semaine intensive HETIC 2016. All Rights Reserved. <br> Le présent site Web et l’ensemble de son contenu, y compris textes, images fixes ou animées, sont protégés par les droits d’auteurs.<br><br>Samantha CHERY (chef de projet - developpeur php), Mélanie HERAULT (designer - Base de Données)<br> El Mahfoud MAHFOUFI (intégrateur), Aurélien ROUCHY (developpeur php), Édouard GACHET (intégrateur)</p>
             </article>
         </section>
 </footer>
