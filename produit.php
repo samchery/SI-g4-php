@@ -15,7 +15,7 @@ require_once "connect.php";
 </head>
 
 <body>
-    <?php include('header.php')?>
+    <?php include('header.php');?>
 
     <section id="produit" class="clearfix">
         <?php 
@@ -44,6 +44,6 @@ require_once "connect.php";
         <p><?=$row['description']?></p>
     </section>
 
-   <?php include('footer.php')?>
+   <?php include('footer.php');?>
 </body>
 </html>
